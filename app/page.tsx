@@ -24,7 +24,7 @@ export default function Home() {
             <a
               className="border-colorSecondary border max-sm:px-2 max-sm:py-1.5 px-4 hover:text-white transition-all
               capitalize hover:bg-colorSecondary py-3"
-              href="#"
+              href="https://jpctwxmsfbarwyzy.public.blob.vercel-storage.com/app-release-2E08BI1I7zh00A0A5qj5eN3qx8bZku.apk"
             >
               download
             </a>
@@ -63,7 +63,7 @@ export default function Home() {
         <a
           className="bg-colorSecondary text-white max-sm:px-2 max-sm:py-1.5 px-4
               capitalize py-3"
-          href="#"
+          href="https://jpctwxmsfbarwyzy.public.blob.vercel-storage.com/app-release-2E08BI1I7zh00A0A5qj5eN3qx8bZku.apk"
         >
           <TfiDownload size={18} className="inline" /> download now
         </a>
