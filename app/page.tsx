@@ -18,7 +18,7 @@ export default function Home() {
             <a href="/privacy-policy">Policy policy</a>
           </li>
           <li className="max-sm:hidden">
-            <a href="/terms-of-use">Policy policy</a>
+            <a href="/terms-of-use">Terms of Use</a>
           </li>
           <li>
             <a
