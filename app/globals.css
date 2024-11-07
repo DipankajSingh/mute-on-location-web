@@ -27,6 +27,11 @@
   }
 }
 
+* {
+  scroll-behavior: smooth;
+
+}
+
 body {
   color: black;
   background: rgb(255 247 237);

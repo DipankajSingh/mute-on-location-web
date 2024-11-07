@@ -5,15 +5,17 @@ interface FeatureItemProps {
   icon: React.ReactNode;
   title: React.ReactNode;
   description: string;
+  id: string;
 }
 
 const FeatureItem: React.FC<FeatureItemProps> = ({
   icon,
   title,
   description,
+  id,
 }) => {
   return (
-    <div className="flex text-center flex-col items-center  p-4">
+    <div id={id} className="flex text-center flex-col items-center  p-4">
       <div className="text-4xl">{icon}</div>
       <div className="flex flex-col">
         <h3 className="text-xl font-semibold">{title}</h3>

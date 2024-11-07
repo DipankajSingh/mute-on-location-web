@@ -11,6 +11,7 @@ const features = [
     description:
       "Automatically mute notifications based on your current location.",
     icon: <FaMapLocation size={130} className="text-colorSecondary" />,
+    id: "location",
   },
   {
     title: (
@@ -24,17 +25,20 @@ const features = [
     description:
       "Unmute notifications for important contacts during incoming calls.",
     icon: <IoMdContacts size={130} className="text-colorSecondary" />,
+    id: "contact",
   },
   {
     title: "Saved Locations",
     description:
       "Manage and view saved locations for muting and unmuting preferences.",
     icon: <MdSaveAs size={130} className="text-colorSecondary" />,
+    id: "saved-locations",
   },
   {
     title: "User-Friendly Interface",
     description: "A clean, intuitive design for easy navigation and control.",
     icon: <GiSmartphone size={130} className="text-colorSecondary" />,
+    id: "",
   },
 ];
 

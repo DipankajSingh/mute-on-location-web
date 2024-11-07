@@ -70,7 +70,7 @@ export default function Home() {
         <a
           className="border-colorSecondary text-colorSecondary border max-sm:px-2 max-sm:py-1.5 px-4 hover:text-white transition-all
               capitalize hover:bg-colorSecondary py-3"
-          href=""
+          href="/not-found"
         >
           <FaAppStore className="inline mr-1" size={22} />
           App Store
