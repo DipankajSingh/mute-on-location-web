@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaAppStore } from "react-icons/fa";
+import { IoLogoAndroid } from "react-icons/io";
 import { TfiDownload } from "react-icons/tfi";
 import Features from "./components/features";
 import Footer from "./components/Footer";
@@ -24,9 +24,9 @@ export default function Home() {
             <a
               className="border-colorSecondary border max-sm:px-2 max-sm:py-1.5 px-4 hover:text-white transition-all
               capitalize hover:bg-colorSecondary py-3"
-              href="https://jpctwxmsfbarwyzy.public.blob.vercel-storage.com/app-release-2E08BI1I7zh00A0A5qj5eN3qx8bZku.apk"
+              href="https://jpctwxmsfbarwyzy.public.blob.vercel-storage.com/app-release.apk"
             >
-              download
+              Download
             </a>
           </li>
         </ul>
@@ -59,24 +59,21 @@ export default function Home() {
           </p>
         </div>
       </main>
-      <div className="flex justify-center gap-7">
+      <div className="flex justify-center items-center gap-7">
         <a
           className="bg-colorSecondary text-white max-sm:px-2 max-sm:py-1.5 px-4
               capitalize py-3"
-          href="https://jpctwxmsfbarwyzy.public.blob.vercel-storage.com/app-release-2E08BI1I7zh00A0A5qj5eN3qx8bZku.apk"
+          href="https://jpctwxmsfbarwyzy.public.blob.vercel-storage.com/app-release.apk"
         >
           <TfiDownload size={18} className="inline" /> download now
         </a>
-        <a
-          className="border-colorSecondary text-colorSecondary border max-sm:px-2 max-sm:py-1.5 px-4 hover:text-white transition-all
-              capitalize hover:bg-colorSecondary py-3"
-          href="/not-found"
-        >
-          <FaAppStore className="inline mr-1" size={22} />
-          App Store
-        </a>
+        <span className="text-colorSecondary uppercase">
+          <IoLogoAndroid className="inline mr-1" size={22} />
+          APK 6.8MB
+        </span>
       </div>
-      <div></div>
+      <p className="text-center py-5">2 Downloads</p>
+
       <Features />
       <Footer />
     </div>
