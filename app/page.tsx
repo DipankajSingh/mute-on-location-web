@@ -3,7 +3,9 @@ import { IoLogoAndroid } from "react-icons/io";
 import { TfiDownload } from "react-icons/tfi";
 import Features from "./components/features";
 import Footer from "./components/Footer";
-export default function Home() {
+import { sql } from "@vercel/postgres";
+
+export default async function Home() {
   return (
     <div className="relative">
       <nav className=" py-8 px-7 max-sm:px-4 flex">
@@ -24,7 +26,7 @@ export default function Home() {
             <a
               className="border-colorSecondary border max-sm:px-2 max-sm:py-1.5 px-4 hover:text-white transition-all
               capitalize hover:bg-colorSecondary py-3"
-              href="https://jpctwxmsfbarwyzy.public.blob.vercel-storage.com/app-release-fObSevn4Ysw5dPMMpqxBkgLgoBIz5L.apk"
+              href="/api/download"
             >
               Download
             </a>
@@ -63,7 +65,7 @@ export default function Home() {
         <a
           className="bg-colorSecondary text-white max-sm:px-2 max-sm:py-1.5 px-4
               capitalize py-3"
-          href="https://jpctwxmsfbarwyzy.public.blob.vercel-storage.com/app-release-fObSevn4Ysw5dPMMpqxBkgLgoBIz5L.apk"
+          href="/api/download"
         >
           <TfiDownload size={18} className="inline" /> download now
         </a>
@@ -72,7 +74,13 @@ export default function Home() {
           APK 6.8MB
         </span>
       </div>
-      <p className="text-center py-5">2 Downloads</p>
+      <p className="text-center py-5">
+        {
+          (await sql`SELECT count FROM download WHERE item_name = 'App';`)
+            .rows[0].count
+        }{" "}
+        Downloads
+      </p>
 
       <Features />
       <Footer />
