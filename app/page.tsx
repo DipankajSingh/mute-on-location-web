@@ -5,6 +5,11 @@ import Features from "./components/features";
 import Footer from "./components/Footer";
 import { sql } from "@vercel/postgres";
 
+async function getDownloadCount() {
+  return (await sql`SELECT count FROM download WHERE item_name = 'App';`)
+    .rows[0].count;
+}
+
 export default async function Home() {
   return (
     <div className="relative">
@@ -74,13 +79,7 @@ export default async function Home() {
           APK 6.8MB
         </span>
       </div>
-      <p className="text-center py-5">
-        {
-          (await sql`SELECT count FROM download WHERE item_name = 'App';`)
-            .rows[0].count
-        }{" "}
-        Downloads
-      </p>
+      <p className="text-center py-5">{await getDownloadCount()} Downloads</p>
 
       <Features />
       <Footer />
