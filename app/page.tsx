@@ -10,6 +10,8 @@ async function getDownloadCount() {
     .rows[0].count;
 }
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   return (
     <div className="relative">
